@@ -458,6 +458,6 @@ const styles = {
     padding: '40px 20px',
     color: 'var(--text-muted)',
     borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-    marginTop: '50px',
+    marginTop: '500px',
   }
 };
