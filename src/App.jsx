@@ -6,30 +6,39 @@ import './index.css';
 const projects = [
   {
     id: 1,
-    title: 'DarkTech',
-    description: 'A modern, sleek dark-themed technology showcase application with seamless transitions and a premium glassmorphism user interface.',
-    tags: ['React', 'Framer Motion', 'CSS'],
+    title: 'Dark Tech Smaakmanipulatie',
+    description: 'Een app waarbij een AI een scan van je hele lichaam maakt en vervolgens een advies geeft over wat voor kleding je kunt dragen. De app is op een provocatieve manier gemaakt, met een donkere kant bij het gebruik van de app. Het doel van deze app was om aan te tonen dat algoritmes bepalen wat mensen hun kledingstijl is.',
+    tags: ['Onderzoek', 'Fysieke Prototype', 'CSS'],
     link: '#',
     github: '#',
     color: '#8b5cf6'
   },
   {
     id: 2,
-    title: 'Vooda Auth System',
-    description: 'A robust and secure authentication flow with beautiful form validation, dynamic state management, and real-time feedback.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
-    link: '#',
+    title: 'Consultant Gamification',
+    description: 'Een oplossing aangeboden aan een bedrijf dat een app had waarbij bijna niemand de app gebruikte. Na het ontwerpen en onderzoeken naar een oplossing hebben wij een oplossing gepitcht met behulp van gamification. "Waar is Wally?" is in de app toegevoegd. Druk op de link om de mockup van de oplossing te bekijken.',
+    tags: ['Onderzoek', 'Analyse', 'Technische Oplossing'],
+    link: 'https://screensdesign.com/create/preview/IpTY0t5wSx',
     github: '#',
     color: '#38bdf8'
   },
   {
     id: 3,
-    title: 'AI Dashboard Pro',
-    description: 'An intelligent analytics dashboard that visualizes complex datasets using cutting-edge chart libraries and responsive layouts.',
-    tags: ['React', 'D3.js', 'Vite'],
-    link: '#',
+    title: 'Stoplight Chaos Game',
+    description: 'Een game waarbij de speler moet springen van autos en de stoplicht een laser schiet. De speler ontwijkt de laser en moet de stoplicht verslaan door hem te slaan met zijn katana. Om de game te spelen, kun je op de link klikken. Hierbij is het proces van de game met behulp van Scrum afgerond.',
+    tags: ['C#', 'Unity', 'Scrum'],
+    link: 'https://jeweettoch321.itch.io/stoplight-chaos',
     github: '#',
     color: '#f43f5e'
+  },
+    {
+    id: 4,
+    title: 'Prehistorical Chase Game',
+    description: 'Een game waarbij de speler een duif is en wordt achtervolgt door een dinosaurus. De speler moet de dinosaurs ontwijken en de dinosaurus verslaan door hem te lijden naar de rode kristallen. Om de game te spelen, kun je op de link klikken. Hierbij is het proces van de game met behulp van Scrum afgerond.',
+    tags: ['C#', 'Unity', 'Scrum'],
+    link: 'https://codinggamernl.itch.io/prehistorical-chase',
+    github: '#',
+    color: '#00a6ff'
   }
 ];
 
@@ -51,7 +60,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'about'];
+      const sections = ['home', 'projecten', 'over mij'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -87,10 +96,10 @@ export default function App() {
             style={styles.logo}
           >
             <Code2 color="#8b5cf6" size={28} />
-            <span>Adam Redjimi</span>
+            <span>Adam Redje</span>
           </motion.div>
           <div style={styles.navLinks}>
-            {['Home', 'Projects', 'About'].map((item) => (
+            {['Home', 'Projecten', 'Over mij'].map((item) => (
               <button 
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
@@ -115,23 +124,23 @@ export default function App() {
           style={styles.heroContent}
         >
           <motion.h2 variants={itemVariant} style={styles.greeting}>
-            Hello, I am
+            Hoi, ik ben
           </motion.h2>
           <motion.h1 variants={itemVariant} style={styles.heroTitle}>
             Adam Redjimi
           </motion.h1>
           <motion.h3 variants={itemVariant} style={styles.heroSubtitle}>
-            Building <span style={{ color: '#8b5cf6' }}>Digital Experiences</span> that Wow.
+            Het maken van <span style={{ color: '#8b5cf6' }}>technische oplossingen</span> is wat doe ik.
           </motion.h3>
           <motion.p variants={itemVariant} style={styles.heroText}>
-            I specialize in crafting premium, high-performance web applications using modern technologies. Let's turn your ideas into reality.
+            Ik heb ervaring in het maken van games, apps, beveiligen van apparaten, problemen onderzoeken en oplossen. Ik hou ervan om gestructureerd te werk te gaan en een planning maken. Naast mijn technische kennis, hou ik ervan om een praatje te maken en te socializen. 
           </motion.p>
           <motion.div variants={itemVariant} style={styles.heroActions}>
-            <button onClick={() => scrollTo('projects')} style={styles.primaryButton}>
-              View My Work
+            <button onClick={() => scrollTo('projecten')} style={styles.primaryButton}>
+              Bekijk mijn werk
             </button>
-            <button onClick={() => scrollTo('about')} style={styles.secondaryButton} className="glass">
-              Contact Me
+            <button onClick={() => scrollTo('over mij')} style={styles.secondaryButton} className="glass">
+              Contacteer mij
             </button>
           </motion.div>
         </motion.div>
@@ -139,21 +148,21 @@ export default function App() {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
           style={styles.scrollIndicator}
-          onClick={() => scrollTo('projects')}
+          onClick={() => scrollTo('projecten')}
         >
           <ChevronDown size={32} color="#94a3b8" />
         </motion.div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" style={styles.section}>
+      <section id="projecten" style={styles.section}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           style={styles.sectionHeader}
         >
-          <h2 style={styles.sectionTitle}>Featured Projects</h2>
+          <h2 style={styles.sectionTitle}>Mijn Projecten</h2>
           <div style={styles.titleUnderline}></div>
         </motion.div>
 
@@ -190,14 +199,14 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" style={{...styles.section, ...styles.aboutSection}}>
+      <section id="over mij" style={{...styles.section, ...styles.aboutSection}}>
          <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           style={styles.sectionHeader}
         >
-          <h2 style={styles.sectionTitle}>Get In Touch</h2>
+          <h2 style={styles.sectionTitle}>Contactgegevens</h2>
           <div style={styles.titleUnderline}></div>
         </motion.div>
 
@@ -209,9 +218,9 @@ export default function App() {
           style={styles.contactCard}
         >
           <div style={styles.contactInfo}>
-            <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', fontFamily: 'var(--font-display)' }}>Let's work together</h3>
+            <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem', fontFamily: 'var(--font-display)' }}>Laten we samen werken</h3>
             <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
-              I'm currently available for freelance work and new opportunities. If you have a project that needs some creative touch, I'd love to hear about it.
+             Ik ben naast alle technische vaardigheden een sociaal persoon. Ik hou ook ervan om de verantwoordelijkheid te nemen om ervoor te zorgen dat het teamverband goed verloopt. Dus als je geinteresseerd bent in een samenwerking, neem dan contact op met mij. 
             </p>
             <div style={styles.socialLinks}>
               <a href="#" style={styles.socialButton} className="glass">
@@ -233,7 +242,7 @@ export default function App() {
 
       {/* Footer */}
       <footer style={styles.footer}>
-        <p>© {new Date().getFullYear()} Adam Redjimi. Crafted with React & Framer Motion.</p>
+        <p>© {new Date().getFullYear()} Adam Redjimi</p>
       </footer>
     </div>
   );
