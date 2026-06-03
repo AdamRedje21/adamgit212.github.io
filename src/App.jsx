@@ -18,6 +18,7 @@ const projects = [
     title: "Dark Tech Smaakmanipulatie",
     description:
       "Een app waarbij een AI een scan van je hele lichaam maakt en vervolgens een advies geeft over wat voor kleding je kunt dragen. De app is op een provocatieve manier gemaakt, met een donkere kant bij het gebruik van de app. Het doel van deze app was om aan te tonen dat algoritmes bepalen wat mensen hun kledingstijl is.",
+    details: "Hier zet je een uitgebreide uitleg van het project...",
     tags: ["Onderzoek", "Fysieke Prototype", "CSS"],
     link: "#",
     color: "#8b5cf6",
@@ -28,7 +29,9 @@ const projects = [
     description:
       'Een oplossing aangeboden aan een bedrijf dat een app had waarbij bijna niemand de app gebruikte. Na het ontwerpen en onderzoeken naar een oplossing hebben wij een oplossing gepitcht met behulp van gamification. "Waar is Wally?" is in de app toegevoegd. Druk op de link om de mockup van de oplossing te bekijken.',
     tags: ["Onderzoek", "Analyse", "Technische Oplossing"],
-    link: "https://screensdesign.com/create/preview/IpTY0t5wSx",
+    details:
+      "Bij Louwman hadden medewerkers de louwman app op hun telefoon, maar ze wisten niet wat ze ermee konden doen. Na onderzoek en analyse heb ik samen met andere studenten een oplossing bedacht waarbij we gamification hebben toegepast. We hebben Waar is Wally toegevoegd aan de app. De medewerkers moeten dan een louwman munt vinden en dan kunnen ze dat sparen en uitgeven voor beloningen. Dit is https://screensdesign.com/create/preview/IpTY0t5wSx de mockup van de oplossing die we hebben gepitcht.",
+    mockupLink: "https://screensdesign.com/create/preview/IpTY0t5wSx",
     color: "#38bdf8",
   },
   {
@@ -37,6 +40,7 @@ const projects = [
     description:
       "Een game waarbij de speler moet springen van autos en de stoplicht een laser schiet. De speler ontwijkt de laser en moet de stoplicht verslaan door hem te slaan met zijn katana. Om de game te spelen, kun je op de link klikken. Hierbij is het proces van de game met behulp van Scrum afgerond.",
     tags: ["C#", "Unity", "Scrum"],
+    details: "Hier zet je een uitgebreide uitleg van het project...",
     link: "https://jeweettoch321.itch.io/stoplight-chaos",
     color: "#f43f5e",
   },
@@ -45,6 +49,8 @@ const projects = [
     title: "Prehistorical Chase Game",
     description:
       "Een game waarbij de speler een duif is en wordt achtervolgt door een dinosaurus. De speler moet de dinosaurs ontwijken en de dinosaurus verslaan door hem te lijden naar de rode kristallen. Om de game te spelen, kun je op de link klikken. Hierbij is het proces van de game met behulp van Scrum afgerond.",
+    details: "Hier zet je een uitgebreide uitleg van het project...",
+
     tags: ["C#", "Unity", "Scrum"],
     link: "https://codinggamernl.itch.io/prehistorical-chase",
     color: "#00a6ff",
@@ -66,6 +72,7 @@ const itemVariant = {
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("home");
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,9 +125,10 @@ export default function App() {
                 onClick={() => scrollTo(item.toLowerCase())}
                 style={{
                   ...styles.navButton,
-color: activeSection === item.toLowerCase()
-  ? "var(--accent-color)"
-  : "var(--text-color)",
+                  color:
+                    activeSection === item.toLowerCase()
+                      ? "var(--accent-color)"
+                      : "var(--text-color)",
                 }}
               >
                 {item}
@@ -158,8 +166,10 @@ color: activeSection === item.toLowerCase()
           />
           <motion.h3 variants={itemVariant} style={styles.heroSubtitle}>
             Het maken van{" "}
-            <span style={{ color: "var(--accent-color)" }}>technische oplossingen</span> is
-            wat doe ik.
+            <span style={{ color: "var(--accent-color)" }}>
+              technische oplossingen
+            </span>{" "}
+            is wat doe ik.
           </motion.h3>
           <motion.p variants={itemVariant} style={styles.heroText}>
             Ik heb ervaring in het maken van games, apps, beveiligen van
@@ -232,15 +242,13 @@ color: activeSection === item.toLowerCase()
                   </span>
                 ))}
               </div>
-              <div style={styles.projectLinks}>
-                <a
-                  href={project.link}
-                  style={styles.iconLink}
-                  title="Live Demo"
-                >
-                  <ExternalLink size={20} />
-                </a>
-              </div>
+              <button
+                onClick={() => setSelectedProject(project)}
+                className="glass"
+                style={styles.projectButton}
+              >
+                Bekijk meer
+              </button>
             </motion.div>
           ))}
         </div>
@@ -290,6 +298,37 @@ color: activeSection === item.toLowerCase()
         </motion.div>
       </section>
 
+      {selectedProject && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>{selectedProject.title}</h2>
+
+            <p>{selectedProject.details}</p>
+
+            {selectedProject.mockupLink && (
+              <div style={{ textAlign: "center", marginTop: "20px" }}>
+                <a
+                  href={selectedProject.mockupLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass"
+                  style={styles.projectButton}
+                >
+                  Bekijk de mockup
+                </a>
+              </div>
+            )}
+
+            <button
+              onClick={() => setSelectedProject(null)}
+              className="glass"
+              style={styles.closeButton}
+            >
+              Sluiten
+            </button>
+          </div>
+        </div>
+      )}
       {/* Footer */}
       <footer style={styles.footer}>
         <p>© {new Date().getFullYear()} Adam Redjimi</p>
@@ -351,6 +390,18 @@ const styles = {
     maxWidth: "800px",
     textAlign: "center",
     marginTop: "60px",
+  },
+  closeButton: {
+    marginTop: "25px",
+    padding: "12px 30px",
+    borderRadius: "30px",
+    border: "1px solid rgba(255,255,255,0.15)",
+    background: "rgba(255,255,255,0.08)",
+    color: "#fff",
+    fontSize: "1rem",
+    fontWeight: 600,
+    cursor: "pointer",
+    transition: "all 0.3s ease",
   },
   greeting: {
     color: "var(--accent-color)",
@@ -428,6 +479,14 @@ const styles = {
     margin: "0 auto",
     borderRadius: "2px",
   },
+projectButton: {
+  display: "inline-block",
+  padding: "15px 35px",
+  borderRadius: "30px",
+  color: "#fff",
+  textDecoration: "none",
+  fontWeight: 600,
+},
   projectsGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
@@ -473,6 +532,7 @@ const styles = {
   },
   projectLinks: {
     display: "flex",
+    flexDirection: "column",
     gap: "15px",
   },
   iconLink: {
