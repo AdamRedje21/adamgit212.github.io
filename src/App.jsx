@@ -118,10 +118,9 @@ export default function App() {
                 onClick={() => scrollTo(item.toLowerCase())}
                 style={{
                   ...styles.navButton,
-                  color:
-                    activeSection === item.toLowerCase()
-                      ? "#8b5cf6"
-                      : "#e2e8f0",
+color: activeSection === item.toLowerCase()
+  ? "var(--accent-color)"
+  : "var(--text-color)",
                 }}
               >
                 {item}
@@ -159,7 +158,7 @@ export default function App() {
           />
           <motion.h3 variants={itemVariant} style={styles.heroSubtitle}>
             Het maken van{" "}
-            <span style={{ color: "#8b5cf6" }}>technische oplossingen</span> is
+            <span style={{ color: "var(--accent-color)" }}>technische oplossingen</span> is
             wat doe ik.
           </motion.h3>
           <motion.p variants={itemVariant} style={styles.heroText}>
@@ -369,7 +368,7 @@ const styles = {
   },
   heroSubtitle: {
     fontSize: "clamp(1.5rem, 4vw, 2.5rem)",
-    color: "#e2e8f0",
+    color: "var(--text-color)",
     marginBottom: "30px",
     fontWeight: 500,
   },
