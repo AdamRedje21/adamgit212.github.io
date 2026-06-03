@@ -13,6 +13,11 @@ import "./index.css";
 import profileFoto from "./assets/profile.jpg";
 import arcaneFendingLogo from "./assets/Arcane Fending/game logo.png";
 import spaceQuestVideo from "./assets/Space Quest/Space Quest Gameplay Video.mp4";
+import fashionTok from "./assets/Dark Tech/FashionTok.PNG";
+import gebruikersTestenFoto from "./assets/Dark Tech/gebruikerstest.PNG";
+import kartonSpiegelFoto from "./assets/Dark Tech/KartonnenSpiegel.PNG";
+import spiegelGeheelFoto from "./assets/Dark Tech/Spiegelgeheel.PNG";
+import eindProductFoto from "./assets/Dark Tech/Eindproduct.PNG";
 const projects = [
   {
     id: 1,
@@ -22,23 +27,54 @@ const projects = [
     details: [
       "Bij dit project ben ik creative technologist geweest. Mijn doel binnen het project was om meer te weten te komen over de gebruikers en gebruikers te testen op basis van ons gerealiseerde prototype.",
       "Hierbij heb ik veel onderzoek gedaan naar dark patterns, iteratief gewerkt, spiegels gemaakt en veel gebruikers getest.",
-      "Ik heb ook een beetje aan de code gezeten, maar heb mij vooral gefocust om ervoor te zorgen dat we een fysiek prototype hadden en dat we genoeg gebruikers hadden om te testen."
+      "Ik heb ook een beetje aan de code gezeten, maar heb mij vooral gefocust om ervoor te zorgen dat we een fysiek prototype hadden en dat we genoeg gebruikers hadden om te testen.",
+      "Als laatste heb ik veel onderzoek gedaan naar manipulatie trucjes ( dark patterns ) en heb ik de inzichten gedeeld met mijn teamgenoten en gewerkt aan meeste documentatie."
     ],
     media: [
-      { 
-        type: "image", 
-        src: profileFoto, 
-        alt: "Profile photo",
+      {
+        type: "image",
+        src: fashionTok,
+        alt: "FashionTok App",
         title: "Prototype Design",
-        description: "De eerste iteratie van het prototype dat we hebben gemaakt"
+        description:
+          "De eerste iteratie, een tiktok stijl app waarbij je allemaal kortingen en aanbiedingen krijgt op kleding dat je liked. Elke keer wanneer je liked krijg je steeds hetzelfde te zien.",
       },
-      { 
-        type: "image", 
-        src: profileFoto, 
-        alt: "Profile photo",
-        title: "Gebruikers Testen",
-        description: "De opstelling voor het testen met echte gebruikers"
-      }
+      {
+        type: "image",
+        src: kartonSpiegelFoto,
+        alt: "Spiegel",
+        title:
+          "Spiegel maken van karton en bepalen welke spiegelgrootte het beste past bij onze app",
+        description:
+          "De tweede iteratie, de juiste spiegel bepalen dat past bij onze app.",
+      },
+            {
+        type: "image",
+        src: gebruikersTestenFoto,
+        alt: "Testen met Gebruikers",
+        title:
+          "Testen met een groepje",
+        description:
+          "Hier testten wij met een groepje om te kijken welke spiegel nou echt het beste past bij onze app en om te kijken of ze er gemanipuleerd door voelen om meer fotos te nemen.",
+      },
+      {
+        type: "image",
+        src: spiegelGeheelFoto,
+        alt: "Gehele ervaring",
+        title:
+          "Ons prototype fysiek",
+        description:
+          "De derde iteratie, bij fashion studenten advies verkrijgen over de gehele ervaring spiegel + .",
+      },
+      {
+        type: "image",
+        src: eindProductFoto,
+        alt: "Spiegel",
+        title:
+          "Echte spiegel met app",
+        description:
+          "Uiteindelijk hebben we een echte spiegel geregeld en daarop een telefoon geplakt.",
+      },
     ],
     tags: ["Onderzoek", "Fysieke Prototype", "CSS"],
     link: "#",
@@ -53,7 +89,7 @@ const projects = [
     details: [
       "Bij Louwman hadden medewerkers de louwman app op hun telefoon, maar ze wisten niet wat ze ermee konden doen.",
       "Na onderzoek en analyse heb ik samen met andere studenten een oplossing bedacht waarbij we gamification hebben toegepast. We hebben Waar is Wally toegevoegd aan de app.",
-      "De medewerkers moeten dan een louwman munt vinden en dan kunnen ze dat sparen en uitgeven voor beloningen."
+      "De medewerkers moeten dan een louwman munt vinden en dan kunnen ze dat sparen en uitgeven voor beloningen.",
     ],
     mockupLink: "https://screensdesign.com/create/preview/IpTY0t5wSx",
     color: "#38bdf8",
@@ -65,10 +101,10 @@ const projects = [
       "Een game waarbij de speler moet springen van autos en de stoplicht een laser schiet. De speler ontwijkt de laser en moet de stoplicht verslaan door hem te slaan met zijn katana. Om de game te spelen, kun je op de link klikken. Hierbij is het proces van de game met behulp van Scrum afgerond.",
     tags: ["C#", "Unity", "Scrum"],
     details: [
-      "Ik heb gewerkt aan de laser van de baas wanneer hij op rood gaat, gebugfixt en de collision detection verbeterd. Daarnaast heb ik gewerkt aan de health van de speler en de baas.",
-      "Naast het werken aan de game, heb ik ook scrum gebruikt en leiderschap overgenomen in het team. Gewerkt aan de planning en ervoor gezorgd dat iedereen in het team zijn taken had. Daarnaast heb ik ook veel code reviews uitgevoerd en gekeken of de code anders kan worden geschreven. Los daarvan heb ik veel gecommuniceerd met teamgenoten en product owner om ervoor te zorgen dat alles soepel verloopt."
+      "Ik heb gewerkt aan de laser van de baas wanneer hij op rood gaat, gebugfixt en de collision detection verbeterd. Daarnaast heb ik gewerkt aan de health van de speler en de baas. Dit is wanneer ik echt leerde om lastigere code te kunnen schrijven en OOP goed toe te passen.",
+      "Naast het werken aan de game, heb ik ook scrum gebruikt en leiderschap overgenomen in het team. Gewerkt aan de planning en ervoor gezorgd dat iedereen in het team zijn taken had. Daarnaast heb ik ook veel code reviews uitgevoerd en gekeken of de code anders kan worden geschreven. Los daarvan heb ik veel gecommuniceerd met teamgenoten en product owner om ervoor te zorgen dat alles soepel verloopt.",
     ],
-    mockupLink: "https://screensdesign.com/create/preview/IpTY0t5wSx",
+    mockupLink: "https://jeweettoch321.itch.io/stoplight-chaos",
     color: "#f43f5e",
   },
   {
@@ -76,50 +112,52 @@ const projects = [
     title: "Prehistorical Chase Game",
     description:
       "Een game waarbij de speler een duif is en wordt achtervolgt door een dinosaurus. De speler moet de dinosaurs ontwijken en de dinosaurus verslaan door hem te lijden naar de rode kristallen. Om de game te spelen, kun je op de link klikken. Hierbij is het proces van de game met behulp van Scrum afgerond.",
-    details: ["Ik heb gewerkt aan de verschillende aanvalsfases die de baas heeft en de health van de baas en hoe hij reageert op de health (van fases verandert). "],
+    details: [
+      "Ik heb gewerkt aan de verschillende aanvalsfases die de baas heeft en de health van de baas en hoe hij reageert op de health (van fases verandert). Dit was mijn eerste keer dat ik lang moest werken aan een grotere game, dus de overstap van Monogame naar Unity maakte het best lastig, maar ik heb toch nog kunnen programmeren en geleerd hier.",
+    ],
     tags: ["C#", "Unity", "Scrum"],
-    link: "https://codinggamernl.itch.io/prehistorical-chase",
+    mockupLink: "https://codinggamernl.itch.io/prehistorical-chase",
     color: "#00a6ff",
   },
-   {
+  {
     id: 5,
     title: "Space Quest",
     description:
       "Space Quest is een bullet hell game waar de speler een ruimteschip bestuurt en andere ruimteschepen verslaat. Het is gemaakt in C# en monogame framework.",
     details: [
-      "In dit project heb ik gewerkt aan het wave systeem, de enemies en de verschillende bullets die de enemies hebben. Ik heb ook gemaakt dat de speler kan schieten en dat er collision is tussen de speler en de enemy."
+      "In dit project heb ik gewerkt aan het wave systeem, de enemies en de verschillende bullets die de enemies hebben. Ik heb ook gemaakt dat de speler kan schieten en dat er collision is tussen de speler en de enemy.",
     ],
     media: [
-      { 
-        type: "video", 
-        src: spaceQuestVideo, 
+      {
+        type: "video",
+        src: spaceQuestVideo,
         alt: "Space Quest Gameplay",
         title: "Gameplay Video",
-        description: "Speel opname van Space Quest"
+        description: "Speel opname van Space Quest",
       },
     ],
-    tags: ["Javascript", "Scrum", "Gamedesign"],
+    tags: ["C#", "Scrum", "Monogame"],
     link: "#",
     color: "#8b5cf6",
   },
-   {
+  {
     id: 6,
     title: "Arcane Fending",
     description:
       "Dit is een 2D Multiplayer Tower Defense game met als thema middeleeuwen (fantasy). De game is gemaakt in een groepje van 4 en is gemaakt in monogame met C#.",
     details: [
-      "Ik heb in dit project alle entities geprogrammeerd in de game, dus de toren en de enemies. Ik heb ook de bullets gemaakt en het wave systeem. Helaas is er geen video van de gameplay."
+      "Ik heb in dit project alle entities geprogrammeerd in de game, dus de toren en de enemies. Ik heb ook de bullets gemaakt en het wave systeem. Helaas is er geen video van de gameplay.",
     ],
     media: [
-      { 
-        type: "image", 
-        src: arcaneFendingLogo, 
+      {
+        type: "image",
+        src: arcaneFendingLogo,
         alt: "Arcane Fending Logo",
         title: "Game Logo",
-        description: "Het logo van het Arcane Fending spel"
+        description: "Het logo van het Arcane Fending spel",
       },
     ],
-    tags: ["Javascript", "Scrum", "Game Design"],
+    tags: ["C#", "Scrum", "Monogame"],
     link: "#",
     color: "#8b5cf6",
   },
@@ -381,7 +419,9 @@ export default function App() {
 
             {Array.isArray(selectedProject.details) ? (
               selectedProject.details.map((paragraph, index) => (
-                <p key={index} style={{ marginBottom: "20px" }}>{paragraph}</p>
+                <p key={index} style={{ marginBottom: "20px" }}>
+                  {paragraph}
+                </p>
               ))
             ) : (
               <p>{selectedProject.details}</p>
@@ -397,7 +437,13 @@ export default function App() {
                       </h4>
                     )}
                     {media.description && (
-                      <p style={{ marginBottom: "15px", color: "#cbd5e1", fontSize: "0.95rem" }}>
+                      <p
+                        style={{
+                          marginBottom: "15px",
+                          color: "#cbd5e1",
+                          fontSize: "0.95rem",
+                        }}
+                      >
                         {media.description}
                       </p>
                     )}
@@ -410,7 +456,7 @@ export default function App() {
                             maxWidth: "100%",
                             height: "auto",
                             borderRadius: "8px",
-                            maxHeight: "300px"
+                            maxHeight: "300px",
                           }}
                         />
                       ) : media.type === "video" ? (
@@ -418,7 +464,11 @@ export default function App() {
                           controls
                           src={media.src}
                           title={media.alt || "Project video"}
-                          style={{ width: "100%", borderRadius: "8px", maxHeight: "480px" }}
+                          style={{
+                            width: "100%",
+                            borderRadius: "8px",
+                            maxHeight: "480px",
+                          }}
                         />
                       ) : null}
                     </div>
@@ -436,7 +486,6 @@ export default function App() {
                   className="glass"
                   style={styles.projectButton}
                 >
-
                   Link
                 </a>
               </div>
@@ -603,14 +652,14 @@ const styles = {
     margin: "0 auto",
     borderRadius: "2px",
   },
-projectButton: {
-  display: "inline-block",
-  padding: "15px 35px",
-  borderRadius: "30px",
-  color: "#fff",
-  textDecoration: "none",
-  fontWeight: 600,
-},
+  projectButton: {
+    display: "inline-block",
+    padding: "15px 35px",
+    borderRadius: "30px",
+    color: "#fff",
+    textDecoration: "none",
+    fontWeight: 600,
+  },
   projectsGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
