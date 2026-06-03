@@ -20,6 +20,8 @@
   /* 📝 text */
   --text-color: #e7f9ff;
   --text-muted: #a8cadd;
+  --bubble-color: rgba(97, 203, 255, 0.28);
+  --bubble-highlight: rgba(170, 235, 255, 0.54);
 
   /* 🔤 fonts */
   --font-sans: 'Inter', sans-serif;
@@ -82,6 +84,88 @@ button {
 
 button:hover {
   transform: translateY(-1px);
+}
+
+.bubble-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--bubble-highlight), var(--bubble-color));
+  box-shadow: 0 0 24px rgba(82, 199, 255, 0.3);
+  opacity: 0.85;
+  animation: bubbleFloat 10s ease-in-out infinite;
+}
+
+.bubble--tiny {
+  width: 18px;
+  height: 18px;
+  bottom: 10%;
+  left: 18%;
+  animation-duration: 11s;
+  animation-delay: 0.4s;
+}
+
+.bubble--small {
+  width: 28px;
+  height: 28px;
+  bottom: 22%;
+  left: 65%;
+  animation-duration: 12s;
+  animation-delay: 0.8s;
+}
+
+.bubble--medium {
+  width: 42px;
+  height: 42px;
+  top: 22%;
+  left: 50%;
+  animation-duration: 14s;
+  animation-delay: 0.2s;
+}
+
+.bubble--large {
+  width: 66px;
+  height: 66px;
+  top: 45%;
+  left: 15%;
+  animation-duration: 16s;
+  animation-delay: 1.2s;
+}
+
+.bubble--xlarge {
+  width: 110px;
+  height: 110px;
+  top: 10%;
+  right: 12%;
+  animation-duration: 18s;
+  animation-delay: 0s;
+}
+
+.bubble--spark {
+  width: 10px;
+  height: 10px;
+  bottom: 40%;
+  right: 24%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+  animation-duration: 8s;
+  animation-delay: 0.6s;
+}
+
+@keyframes bubbleFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.06);
+    opacity: 0.95;
+  }
 }
 
 /* 🌫️ GLASSMORPHISM (Aero style) */

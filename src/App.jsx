@@ -208,6 +208,14 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="home" style={styles.heroSection}>
+        <div className="bubble-layer">
+          <span className="bubble bubble--xlarge"></span>
+          <span className="bubble bubble--large"></span>
+          <span className="bubble bubble--medium"></span>
+          <span className="bubble bubble--small"></span>
+          <span className="bubble bubble--tiny"></span>
+          <span className="bubble bubble--spark"></span>
+        </div>
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -428,7 +436,7 @@ export default function App() {
                   className="glass"
                   style={styles.projectButton}
                 >
-                  
+
                   Link
                 </a>
               </div>
@@ -500,6 +508,7 @@ const styles = {
     alignItems: "center",
     padding: "0 20px",
     position: "relative",
+    overflow: "hidden",
   },
   heroContent: {
     maxWidth: "800px",
