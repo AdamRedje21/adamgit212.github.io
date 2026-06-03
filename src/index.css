@@ -127,6 +127,8 @@ button {
 .modal-content {
   width: 700px;
   max-width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
 
   padding: 40px;
 
