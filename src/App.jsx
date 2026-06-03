@@ -719,6 +719,7 @@ const styles = {
     transition: "background 0.3s ease, transform 0.3s ease",
   },
   aboutSection: {
+    minHeight: "auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -750,6 +751,5 @@ const styles = {
     padding: "40px 20px",
     color: "var(--text-muted)",
     borderTop: "1px solid rgba(255, 255, 255, 0.05)",
-    marginTop: "500px",
   },
 };
